@@ -1,4 +1,5 @@
-var hammertime = new Hammer(myElement, myOptions);
+let slideWrap = document.querySelector('.slider-wrapper');
+var hammertime = new Hammer(slideWrap);
 hammertime.on('pan', function(ev) {
-	console.log(ev);
+	myElement.textContent = ev.type +" gesture detected.";
 });
